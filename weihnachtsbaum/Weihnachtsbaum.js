@@ -27,7 +27,7 @@ class Weihnachtsbaum {
     }
 }
 
-for (let i = 0; i < 30; i++) {
-    let wb = new Weihnachtsbaum(10);
+for (let i = 0; i < 10; i++) {
+    let wb = new Weihnachtsbaum(i);
     wb.aufstellen();
 }
