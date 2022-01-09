@@ -1,0 +1,26 @@
+{
+    "IBM": {
+        "symbol": "IBM",
+        "price": 271.83,
+        "timestamp": "2022-01-09T22:15:17.401Z",
+        "exchange": "NYSE"
+    },
+    "APPLE": {
+        "symbol": "APPLE",
+        "price": 990.61,
+        "timestamp": "2022-01-09T22:15:17.401Z",
+        "exchange": "NYSE"
+    },
+    "GOOGLE": {
+        "symbol": "GOOGLE",
+        "price": 817.73,
+        "timestamp": "2022-01-09T22:15:17.401Z",
+        "exchange": "NYSE"
+    },
+    "AMAZON": {
+        "symbol": "AMAZON",
+        "price": 120.52,
+        "timestamp": "2022-01-09T22:15:17.401Z",
+        "exchange": "NYSE"
+    }
+}
