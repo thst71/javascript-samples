@@ -3,11 +3,11 @@ let withPi = {
 
     get radius() {
         console.log("getting the value through the getter");
-        return this.radiusValue;
+        return this._radiusValue;
     },
     set radius(newRad) {
         console.log("so excited, the setter has been called");
-        this.radiusValue = newRad;
+        this._radiusValue = newRad;
     }
 }
 
