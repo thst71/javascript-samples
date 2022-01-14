@@ -7,7 +7,6 @@ class BigCalc {
         this.nachkommastellen = nachkommastellen;
         this.factor = 10n ** BigInt(nachkommastellen);
         this.result = 0n;
-
     }
 
     operation(opChar, amount) {
