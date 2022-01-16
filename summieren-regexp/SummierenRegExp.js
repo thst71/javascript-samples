@@ -6,11 +6,6 @@ class Result {
     }
 }
 
-const digits = "0123456789";
-
-const mode_read = "read";
-const mode_digit = "digit";
-
 class NumberExtractorRegExp {
     constructor(text) {
         this.text = text;
