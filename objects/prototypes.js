@@ -8,7 +8,7 @@ ObjectA.prototype = {
     aFunction(aParameter) {
         console.log(this.aProperty, " ", aParameter)
     }
-}   
+}
 let objA = new ObjectA(29);
 console.log(objA);
 

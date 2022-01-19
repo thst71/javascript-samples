@@ -2,7 +2,7 @@
 
 function StockMarket(exchange) {
     this.exchange = exchange
-}
+ }
 
 StockMarket.prototype = {
     getStockQuote(stock) {
