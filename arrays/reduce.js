@@ -10,6 +10,9 @@ let numbers = [];
 let digitizer = (sequence, nextChar) => 
     DIGITS.includes(nextChar) ? sequence + nextChar : (numbers.push(sequence), "");
 
+let digitizer = (sequence, nextChar) => 
+    DIGITS.includes(nextChar) ? sequence + nextChar : (numbers.push(sequence), "");
+
 numbers.push([...INPUT].reduce( digitizer, ""));
 let result = numbers.filter( x => x );
 console.log(result);
