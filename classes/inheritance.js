@@ -37,7 +37,8 @@ console.log(child.counter);
 
 //  Private Variables für Properties nachträglich hinzugefügt
 
-// define private Variables in einer eigenen Funktion, die den Parent Prototype modifiziert
+// define private Variables in einer eigenen 
+// Funktion, die den Parent Prototype modifiziert
 (function () {
     let _velocity = 100;
     const MAX_VELOCITY = 380;
