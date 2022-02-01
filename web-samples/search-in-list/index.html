@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .treffer {
+            background-color: red;
+        }
+    </style>
+    <script>
+        function searchAndHighlight(e) {
+            let text = document.querySelector("#searchfield").value;
+            let list = document.querySelectorAll("li");
+            list.forEach(li => li.className = (text && li.textContent.includes(text)) ? "treffer" : "");
+        }
+    </script>
+</head>
+
+<body>
+    <form id="search">
+        <input id="searchfield" type="text" placeholder="search here">
+    </form>
+    <ul>
+        <li>Huhu</li>
+        <li>Hallo</li>
+        <li>HäHö</li>
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Baz</li>
+    </ul>
+    <script>
+        document.querySelector("#search").onsubmit = (e) => e.preventDefault();
+        document.querySelector("#searchfield").addEventListener("input", searchAndHighlight);
+    </script>
+</body>
+
+</html>

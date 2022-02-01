@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function validateForm(event) {
+            try {
+                let userInput = this.children["userinput"];
+                if (userInput.value.match(/\d+/)) {
+                    this.children["error"].textContent = "No digits allowed in input!";
+                    userInput.value = userInput.value.replaceAll(/\d+/g, "");
+                    event.preventDefault();
+                }
+                return
+            } catch (e) {
+                event.preventDefault();
+                console.log(e);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="dataEntry" action="https://google.com">
+        <input type="text" name="userinput">
+        <input type="submit">
+        <div id="error"></div>
+    </form>
+
+
+    <script>
+        document.querySelector("#dataEntry").addEventListener("submit", validateForm);
+    </script>
+</body>
+
+</html>
