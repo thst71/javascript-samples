@@ -75,4 +75,5 @@ function initWeatherForm() {
 }
 
 window.addEventListener("load", initWeatherForm);
-export { initWeatherForm };
+
+export {};
