@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body onload="console.log('im html')">
+    <h1>Hallo mit addEventHandler</h1>
+    <script>
+        window.addEventListener("load", e => console.log("added 1"));
+        window.addEventListener("load", e => console.log("added 2"));
+        window.onload = e => console.log("als Eigenschaft");
+        window.addEventListener("load", e => console.log("added 3"));
+    </script>
+    </body>
+</html>
