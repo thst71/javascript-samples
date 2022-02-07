@@ -28,7 +28,7 @@ wetterOut.innerHTML = weatherHtml;
 }
 
 function displayLocations(locationList) {
-    let locationHtml = "<ul>" + locationList.map(loc =>
+    let locationHtml = "<ul class='locations'>" + locationList.map(loc =>
 `<li \
 data-locationlink="true" \
 data-lon="${loc.lon}" \
