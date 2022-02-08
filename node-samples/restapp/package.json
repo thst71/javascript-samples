@@ -1,0 +1,19 @@
+{
+  "name": "de.beanfactory.js.restapp",
+  "version": "1.0.0",
+  "description": "this is a hello-world app for express.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "ba-rm",
+    "js2022"
+  ],
+  "author": "Thomas Strauß",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
