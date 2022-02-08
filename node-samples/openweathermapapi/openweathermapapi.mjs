@@ -1,4 +1,7 @@
 import * as https from "https";
+import fs from "fs";
+import * as os from "os";
+import path from "path";
 
 const OPEN_WEATHER_API = "https://api.openweathermap.org"
 
@@ -6,8 +9,12 @@ class OpenWeatherMapApi {
     #appId;
 
     constructor(appId) {
-        if(!appId) throw new Error("No AppId (API Key) given in constructor, exiting");
-        this.#appId = appId;
+        if(!appId) {
+            this.#readApiKeyFile()
+        }
+        else {
+            this.#appId = appId;
+        }
     }
 
     fetchWeatherAtLocation(lat, lon, callback, ...parameters) {
@@ -22,6 +29,12 @@ class OpenWeatherMapApi {
 
     defaultErrorCallback(message) {
         alert(message);
+    }
+
+    #readApiKeyFile() {
+        const apipath = path.join(os.homedir(), ".openweathermap", "appid");
+        let fileData = fs.readFileSync(apipath, {encoding: "utf-8"});
+        this.#appId = fileData.trim();
     }
 
     #appendAppId(url) {

@@ -1,6 +1,6 @@
 import { OpenWeatherMapApi } from "./openweathermapapi.mjs";
 
-const api = new OpenWeatherMapApi("");
+const api = new OpenWeatherMapApi();
 
 api.fetchLocations("Frankfurt", fetchWeatherOnLoction);
 
