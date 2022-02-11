@@ -2,7 +2,7 @@ import Sieve from "./sieve.mjs";
 
 console.log([... new Sieve(30)].join(","));
 
-for(let p of new Sieve(2000)) { console.log(p) };
+for(let p of new Sieve(2000)) { console.log(p) }
 
 const [a, b, ...remaining] = [...new Sieve(100)];
 
@@ -17,6 +17,6 @@ console.log( "100 ... 200");
 console.log(p); // bereits vom Iterator geholt
 while((p=primerator.next()?.value) && p<200) console.log(p);
 
-let large = new Sieve(100_000_000);
+let large = new Sieve(100_000);
 
 for(p of large) console.log(p);
