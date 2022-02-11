@@ -10,7 +10,9 @@ You can reach me over this repository
 These samples are tell-ware: You are free to use them, if you tell me. 
 Use at your own risk, standard disclaimers apply (see below).
 
-Forking is telling :-)
+## Fork me!
+Forking is sharing, if you find these samples useful for your own classes, please fork the repo. I will be happy 
+to exchange improvements with you :-)
 
 If you manage to produce liabilities with the code from this repository, that is your problem. 
 
