@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #timeline {
+            min-width: 500px;
+            max-width: 1000px;
+            min-height: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/timeline.js"></script>
+    <script>
+        function onLoad() {
+            Highcharts.chart('timeline', {
+                chart: {
+                    zoomType: 'x',
+                    type: 'timeline',
+                    inverted: true
+                },
+                xAxis: {
+                    visible: false
+                },
+                yAxis: {
+                    visible: false
+                },
+                legend: {
+                    enabled: false
+                },
+                title: {
+                    text: 'Client-side JavaScript timeline'
+                },
+                tooltip: {
+                    style: {
+                        width: 400
+                    }
+                },
+                series: [{
+                    dataLabels: {
+                        allowOverlap: false,
+                        format: '<span style="font-weight: bold;" >{point.name}</span><br/>{point.label}'
+                    },
+                    marker: {
+                        symbol: 'circle'
+                    },
+                    data: [{
+                        name: 'Create DOM - start parsing',
+                        label: 'Parsing DOM, document.readyState==="loading"',
+                        description: "The web browser creates a Document object and begins parsing the web page, adding Element objects and Text nodes to the document as it parses HTML elements and their textual content. The document.readyState property has the value “loading” at this stage.".replace("<", "&lt;")
+                    }, {
+                        name: 'run &lt;script> tags',
+                        label: 'Scripts execution',
+                        description: "When the HTML parser encounters a &lt;script> tag that does not have any of the async, defer, or type=\"module\" attributes, it adds that script tag to the document and then executes the script. The script is executed synchronously, and the HTML parser pauses while the script downloads (if necessary) and runs. A script like this can use document.write() to insert text into the input stream, and that text will become part of the document when the parser resumes. A script like this often simply defines functions and registers event handlers for later use, but it can traverse and manipulate the document tree as it exists at that time. That is, non-module scripts that do not have an async or defer attribute can see their own <script> tag and document content that comes before it.".replace("<", "&lt;")
+                    }, {
+                        name: 'deferred and async scripts',
+                        label: ' deferred and async scripts load in the background',
+                        description: "When the parser encounters a <script> element that has the async attribute set, it begins downloading the script text (and if the script is a module, it also recursively downloads all of the script's dependencies) and continues parsing the document. The script will be executed as soon as possible after it has downloaded, but the parser does not stop and wait for it to download. Asynchronous scripts must not use the document.write() method. They can see their own <script> tag and all document content that comes before it, and may or may not have access to additional document content.".replace("<", "&lt;")
+                    }, {
+                        name: 'parsing complete',
+                        label: 'document.readyState === "interactive"',
+                        description: 'When the document is completely parsed, the document.readyState property changes to “interactive.”'
+                            .replace("<", "&lt;")
+                    }, {
+                        name: 'run deferred scripts',
+                        label: 'deferred scripts run in order of appearance',
+                        description: 'Any scripts that had the defer attribute set (along with any module scripts that do not have an async attribute) are executed in the order in which they appeared in the document. Async scripts may also be executed at this time. Deferred scripts have access to the complete document and they must not use the document.write() method.'
+                            .replace("<", "&lt;")
+                    }, {
+                        name: 'DOM Parsing ready',
+                        label: 'Fire DOMContentLoaded Event',
+                        description: 'The browser fires a “DOMContentLoaded” event on the Document object. This marks the transition from synchronous script-execution phase to the asynchronous, event-driven phase of program execution. Note, however, that there may still be async scripts that have not yet executed at this point.'
+                            .replace("<", "&lt;")
+                    }, {
+                        name: 'Waiting for external content',
+                        label: 'async scripts and external content is still loading',
+                        description: 'The document is completely parsed at this point, but the browser may still be waiting for additional content, such as images, to load.'
+                            .replace("<", "&lt;")
+                    }, {
+                        name: 'all resources loaded',
+                        label: 'document.readyState === "complete", load event fires',
+                        description: 'When all such content finishes loading, and when all async scripts have loaded and executed, the document.readyState property changes to “complete” and the web browser fires a “load” event on the Window object.'
+                            .replace("<", "&lt;")
+                    }, {
+                        name: 'enter event loop',
+                        label: 'handle events and user input',
+                        description: 'From this point on, event handlers are invoked asynchronously in response to user input events, network events, timer expirations, and so on.'
+                            .replace("<", "&lt;")
+                    },
+                    ]
+                }]
+            });
+        }
+    </script>
+</head>
+
+<body onload="onLoad()">
+<div id="timeline"></div>
+</body>
+
+</html>
