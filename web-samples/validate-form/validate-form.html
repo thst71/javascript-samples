@@ -21,16 +21,16 @@
 </head>
 
 <body>
-    <form id="dataEntry" action="https://google.com">
-        <input type="text" name="userinput">
-        <input type="submit">
-        <div id="error"></div>
-    </form>
+<form action="https://google.com" id="dataEntry">
+    <input name="userinput" type="text">
+    <input type="submit">
+    <div id="error"></div>
+</form>
 
 
-    <script>
-        document.querySelector("#dataEntry").addEventListener("submit", validateForm);
-    </script>
+<script>
+    document.querySelector("#dataEntry").addEventListener("submit", validateForm);
+</script>
 </body>
 
 </html>
