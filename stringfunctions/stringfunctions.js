@@ -19,7 +19,7 @@ console.log("repeat(): ", "hello world".repeat(3));
 console.log("replace(): ", "hello world".replace("world", "ape"));
 console.log("replaceAll(): ", "hello world".replaceAll("o", "ö"));
 console.log("search(): ", "hello world".search("o"));
-console.log("slice(): ", "hello world".slice(5,8));
+console.log("slice(): ", "hello world".slice(5, 8));
 console.log("split(): ", "hello world".split("o"));
 console.log("startsWith(): ", "hello world".startsWith("hell"));
 console.log("substring(): ", "hello world".substring(3, 5));

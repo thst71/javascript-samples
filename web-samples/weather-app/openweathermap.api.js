@@ -3,6 +3,7 @@ const OPEN_WEATHER_API = "https://api.openweathermap.org"
 class OpenWeatherMapApi {
     #appId;
     #errorCallback;
+
     constructor(appId, errorCallback) {
         this.#appId = appId;
         this.#errorCallback = errorCallback ? errorCallback : this.defaultErrorCallback;
@@ -25,14 +26,14 @@ class OpenWeatherMapApi {
     #appendAppId(url) {
         url.searchParams.set("appid", this.#appId);
     }
-    
+
     #fetchLocationURL(query) {
         let url = new URL(OPEN_WEATHER_API + "/geo/1.0/direct?limit=5");
         this.#appendAppId(url);
         url.searchParams.set("q", query);
         return url;
     }
- 
+
     #fetchWeatherURL(lat, lon) {
         let url = new URL(OPEN_WEATHER_API + "/data/2.5/weather");
         this.#appendAppId(url);
@@ -42,7 +43,7 @@ class OpenWeatherMapApi {
         url.searchParams.set("lang", "de");
         return url;
     }
- 
+
     #fetchApiData(url, callback, ...parameters) {
         let apiError = false;
         let self = this;
@@ -52,12 +53,12 @@ class OpenWeatherMapApi {
                 return response.json();
             })
             .then(payload => {
-                if(apiError) throw payload;
+                if (apiError) throw payload;
                 callback(payload, ...parameters);
             })
             .catch(e => {
                 let message = "";
-                if(e instanceof Error) {
+                if (e instanceof Error) {
                     message = e.message;
                 } else {
                     message = `API konnte nicht abgerufen werden ${e.cod} - ${e.message}`;
@@ -68,4 +69,4 @@ class OpenWeatherMapApi {
 
 }
 
-export { OpenWeatherMapApi };
+export {OpenWeatherMapApi};

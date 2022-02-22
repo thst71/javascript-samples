@@ -1,4 +1,4 @@
-import { OpenWeatherMapApi } from "./openweathermap.api.js";
+import {OpenWeatherMapApi} from "./openweathermap.api.js";
 
 const API_KEY = new URL(document.URL).searchParams.get("appId");
 
@@ -13,8 +13,8 @@ function displayApiError(message) {
 }
 
 function displayWeather(weather, title) {
-    let weatherHtml = 
-`\
+    let weatherHtml =
+        `\
 <h3>${weather.name} / ${title}</h3>
 <hr>
 <ul>
@@ -24,12 +24,12 @@ function displayWeather(weather, title) {
 <li>Wind: ${weather.wind.speed} km/h aus ${weather.wind.deg}°</li>
 </ul>
 `;
-wetterOut.innerHTML = weatherHtml;
+    wetterOut.innerHTML = weatherHtml;
 }
 
 function displayLocations(locationList) {
     let locationHtml = "<ul class='locations'>" + locationList.map(loc =>
-`<li \
+        `<li \
 data-locationlink="true" \
 data-lon="${loc.lon}" \
 data-lat="${loc.lat}" \
@@ -41,7 +41,7 @@ ${loc.name}, ${loc.country} ${loc.state}</li>`
 
 function onClickInAusgabe(e) {
     if (e.target.dataset.locationlink) {
-        const { lat, lon, title } = e.target.dataset;
+        const {lat, lon, title} = e.target.dataset;
         openWeatherMap.fetchWeatherAtLocation(lat, lon, displayWeather, title);
     }
 }

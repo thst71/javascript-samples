@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>und nun, das Wetter</title>
-        <script type="module" src="weather-app.js"></script>
-        <style>
-            #wetter-ausgabe ul.locations li:hover {
-                text-decoration: underline;
-            }
-            #wetter-ausgabe ul.locations li {
-                cursor: pointer;
-                list-style-type: none;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Wie ist das Wetter in ...</h1>
-        <form id="wetter-eingabe">
-            <input type="text" id="wetter-location">
-            <input type="submit" name="suche" value="suche Wetter">
-        </form>
-        <div id="wetter-ausgabe"></div>
-    </body>
+<head>
+    <title>und nun, das Wetter</title>
+    <script src="weather-app.js" type="module"></script>
+    <style>
+        #wetter-ausgabe ul.locations li:hover {
+            text-decoration: underline;
+        }
+
+        #wetter-ausgabe ul.locations li {
+            cursor: pointer;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Wie ist das Wetter in ...</h1>
+<form id="wetter-eingabe">
+    <input id="wetter-location" type="text">
+    <input name="suche" type="submit" value="suche Wetter">
+</form>
+<div id="wetter-ausgabe"></div>
+</body>
 </html>

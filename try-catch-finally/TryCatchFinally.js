@@ -1,25 +1,25 @@
-const E_UNDEFINED =  new Error("Call function with one parameter, that is not empty or null")
+const E_UNDEFINED = new Error("Call function with one parameter, that is not empty or null")
 const E_NULL = new Error("The parameter given must not be null")
 
 function throwIfEmpty(aValue) {
 
-    if(aValue === undefined) {
+    if (aValue === undefined) {
         throw E_UNDEFINED
     }
 
-    if(aValue === null) {
+    if (aValue === null) {
         throw E_NULL
     }
 
-    if(aValue === "") {
+    if (aValue === "") {
         throw new Error("String must not be empty")
     }
 
-    if(Number.isNaN(aValue)) {
+    if (Number.isNaN(aValue)) {
         throw new Error("The value given in NaN")
     }
 
-    if(typeof aValue === "number" && !Number.isFinite(aValue)) {
+    if (typeof aValue === "number" && !Number.isFinite(aValue)) {
         throw new Error("The value given is infinity")
     }
 
@@ -27,11 +27,11 @@ function throwIfEmpty(aValue) {
 }
 
 function handleError(error) {
-    switch(error) {
-        case E_UNDEFINED : 
+    switch (error) {
+        case E_UNDEFINED :
             handleUndefinedException(error)
             break;
-        case E_NULL : 
+        case E_NULL :
             handleNullException(error)
             break;
         default:
@@ -51,7 +51,7 @@ function handleUndefinedException(error) {
 // outer try:
 try {
 
-    for(func of [
+    for (func of [
         () => throwIfEmpty(),
         () => throwIfEmpty(null),
         () => throwIfEmpty("this is valid"),
@@ -66,14 +66,13 @@ try {
             handleError(error)
         } finally {
             console.log("This code will always run!")
-        }    
+        }
 
     }
 
-} catch(outer) {
+} catch (outer) {
     console.log("This is the outer default exception handler: ", outer)
-}
-finally {
+} finally {
     console.log("This outer finally code will always run")
 }
 
