@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <a href="/" class="mylink">this link calls javascript</a>
-        <script>
-            let link = document.querySelector(".mylink");
-            link.addEventListener("click", function(e) {
-                e.preventDefault();
-                this.textContent = "you clicked me!"
-            } );
-        </script>
-    </body>
+<head>
+</head>
+<body>
+<a class="mylink" href="/">this link calls javascript</a>
+<script>
+    let link = document.querySelector(".mylink");
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        this.textContent = "you clicked me!"
+    });
+</script>
+</body>
 </html>
