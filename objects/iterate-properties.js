@@ -57,12 +57,15 @@ for(const k of Reflect.ownKeys(child)) {
     console.log(k);
 }
 
+console.log("merge =========");
+
 function merge(target, source) {
     for(const p in source) {
         if(!Reflect.ownKeys(target).includes(p)) {
             target[p] = source[p];
             console.log(`set target[${p}] = ${target[p]}`);
         }
+        else console.log(`skipped ${p}`);
     }
 }
 
