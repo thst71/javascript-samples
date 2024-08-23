@@ -5,6 +5,16 @@ function konsolidieren(startwert = 0, operation, ...input ) {
 console.log(konsolidieren(0, (a,b) => a+b, 1,2,3,4,5));
 
 
+
+
+
+
+
+
+
+
+
+console.log("===== Wrapper");
 function wrap(f) {
     return function (...all) {
         console.log("------------");
