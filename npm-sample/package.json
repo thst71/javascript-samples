@@ -1,0 +1,15 @@
+{
+  "name": "ba.test.myapp",
+  "version": "1.0.0",
+  "description": "Test von NPM Setup",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \\\"hello\\\""
+  },
+  "author": "Thomas Strauss",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
