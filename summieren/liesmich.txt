@@ -1,0 +1,13 @@
+1. Durchsuche den Eingangs-String zeichenweise
+2. Wenn ein Zeichen gefunden wird, das eine Ziffer ist, 
+   beginne damit, die Ziffern in einen Zahlenstring zu überführen
+3. Wiederhole das so lang, bis das nächste gelesene Zeichen keine Ziffer mehr,
+   oder der String zuende ist.
+4. Der gelesene Zahlentext muss in einem Array abgelegt werden.
+5. Durchsuche den Eingangsstring weiter, bis zum Ende des Strings.
+
+- Wie erkennt man, ob ein Zeichen eine Ziffer ist?
+- Mit Number(<String>) wird ein String in eine Zahl umgewandelt und kann addiert werden.
+- Erstelle eine Klasse zum Finden von Nummern in einem String und eine Klasse, 
+  die als Ergebnisobjekt dient.
+
