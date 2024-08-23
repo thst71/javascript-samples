@@ -58,6 +58,7 @@ for (let termGroup of terms) {
         let parseResult = parser.parse(term)
         console.log(`\
 valid: ${pad(5, parseResult.result)} \
+expected: ${termGroup.result} \
 stopped at pos ${pad(2, parseResult.position)} \
 open count ${pad(2, parseResult.open)} \
 on ${term}\
