@@ -17,12 +17,14 @@ StockMarket.prototype = {
 
 const all_stocks = ["IBM", "APPLE", "GOOGLE", "AMAZON"];
 
+// iterate over values to create properties
 function initPortfolio(portfolio, stocks) {
     for (let stock of stocks) {
         portfolio[stock] = {};
     }
 }
 
+// iterate over properties to fill objects
 function getQuotes(portfolio, exchange) {
     for (let symbol in portfolio) {
         portfolio[symbol] = exchange.getStockQuote(symbol);
