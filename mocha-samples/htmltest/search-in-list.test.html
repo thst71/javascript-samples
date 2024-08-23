@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .treffer {
+            background-color: red;
+        }
+    </style>
+
+    <!-- make sure, we find the tested module without prefix -->
+    <base href="/"/>
+
+    <!-- include the mocha.css -->
+    <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+
+    <!-- our code is a module -->
+    <script type="module" src="search-in-list.js"></script>
+      
+    <!-- include the testing code as a module as well (because of defer!) -->
+    <script type="module" src="htmltest/search-in-list.test.html.js"></script>
+
+</head>
+
+<body>
+    <div id="mocha"></div>
+
+    <!-- load mocha stuff -->
+    <script src="node_modules/mocha/mocha.js"></script>
+
+    
+    <form id="search">
+        <input id="searchfield" type="text" placeholder="search here">
+    </form>
+    <ul>
+        <li>Box</li>
+        <li>Quiz</li>
+        <li>Judo</li>
+        <li>Wal</li>
+        <li>Mix</li>
+        <li>Gift</li>
+        <li>Fee</li>
+        <li>Ohr</li>
+        <li>Pony</li>
+        <li>Netz</li>
+        <li>Lachs</li>
+        <li>Kite</li>
+        <li>Vase</li>
+        <li>Boot</li>
+        <li>Chef</li>
+        <li>Duell</li>
+        <li>Mücke</li>
+        <li>Yacht</li>
+        <li>Joker</li>
+        <li>Gnu</li>
+      </ul>
+
+      <!-- init mocha -->
+      <script class="mocha-init">
+        mocha.setup('bdd');
+        mocha.checkLeaks();
+      </script>
+</body>
+
+</html>
+
+<!-- module test will run deferred -->

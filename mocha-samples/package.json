@@ -1,0 +1,25 @@
+{
+  "name": "mocha-samples",
+  "version": "1.0.0",
+  "description": "sample code with mocha",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha",
+    "serve": "npx http-server .",
+    "e2e": "npx cypress run",
+    "open": "npx cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "cypress": "^13.13.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+  }
+}
