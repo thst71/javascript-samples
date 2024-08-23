@@ -59,3 +59,5 @@ for(let n of result.numbers) {
 
 console.log("Product === 0: ", result.product === 0);
 console.log("Summe === 1727: ", result.sum === 1727);
+
+console.log(JSON.stringify(result));
