@@ -27,6 +27,10 @@ export default class CharRange {
                 return ( current <= last) ? {value: current}
                                           : {done: true};  
             },
+            return() { 
+                console.log("*** break"); 
+                return {} 
+            },
             [Symbol.iterator]() { return this }
         };
     }
