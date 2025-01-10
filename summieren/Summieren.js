@@ -1,5 +1,6 @@
 class Result {
     constructor() {
+        this.input = "";
         this.numbers = [];
         this.sum = 0;
         this.product = 1;
@@ -56,6 +57,8 @@ for(let n of result.numbers) {
     result.product *= n;
     result.sum += n;
 }
+
+result.input = nE.text;
 
 console.log("Product === 0: ", result.product === 0);
 console.log("Summe === 1727: ", result.sum === 1727);
