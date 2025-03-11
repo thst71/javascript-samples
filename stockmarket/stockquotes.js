@@ -1,5 +1,4 @@
 // StockMarket API
-
 function StockMarket(exchange) {
     this.exchange = exchange
  }
@@ -24,6 +23,13 @@ function initPortfolio(portfolio, stocks) {
     }
 }
 
+
+function initPortfolio2(portfolio, all_stocks) {
+    for (let i = 0;
+         i < all_stocks.length;
+         portfolio[all_stocks[i++]] = null) ;
+}
+
 // iterate over properties to fill objects
 function getQuotes(portfolio, exchange) {
     for (let symbol in portfolio) {
@@ -35,3 +41,4 @@ let portfolio = {};
 initPortfolio(portfolio, all_stocks);
 getQuotes(portfolio, new StockMarket("NYSE"));
 console.log(JSON.stringify(portfolio));
+

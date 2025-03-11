@@ -14,8 +14,8 @@ class Weihnachtsbaum {
     aufstellen() {
         if (this.height > 1) {
             let rowOffset = this.maxOffset;
-            for (let i=0; i<this.height; i++) {
-                let width = i * 2 + 1;
+            for (let row = 0; row < this.height; row++) {
+                let width = row * 2 + 1;
                 console.log(`${" ".repeat(rowOffset)}${"*".repeat(width)}`);
                 rowOffset--;
             }

@@ -17,7 +17,8 @@ class NumberExtractorRegExpMap {
     }
 
     searchNumbers() {
-        this.numbers = this.text.match(/\d+/g).map( val => Number(val) )
+//        this.numbers = this.text.match(/\d+/g).map( val => Number(val) )
+        this.numbers = this.text.match(/\d+/g).map(Number)
     }
 }
 
