@@ -7,14 +7,18 @@ function counter() {
 }
 
 let myC = counter();
+let myC2 = counter();
 
-console.log(myC.count());
-console.log(myC.count());
+console.log("1. Count myC " + myC.count());
+console.log("2. Count myC " + myC.count());
 
+console.log("reset the myC counter");
 myC.reset();
 
-console.log("n" in myC); // --> false
-console.log(Object.keys(myC)); 
+console.log("3. Count myC " + myC.count());
+console.log("4. Count myC " + myC.count());
 
-console.log(myC.count());
-console.log(myC.count());
+console.log("is there a property n in myC? -> " + ("n" in myC)); // --> false
+console.log("Properties of myC: " + Object.keys(myC));
+
+console.log("Counter myC2 is unchanged: " + myC2.count());
