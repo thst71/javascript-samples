@@ -57,14 +57,20 @@ for(const k of Reflect.ownKeys(child)) {
     console.log(k);
 }
 
+console.log("merge =========");
+
 function merge(target, source) {
     for(const p in source) {
-        if(!Reflect.ownKeys(target).includes(p)) {
+        if (!Reflect.ownKeys(target).includes(p)) { // p in target
             target[p] = source[p];
             console.log(`set target[${p}] = ${target[p]}`);
         }
+        else console.log(`skipped ${p}`);
     }
 }
+
+let motherChild = {};
+Object.assign(motherChild, parent, child);
 
 merge(child, parent);
 
@@ -73,3 +79,7 @@ for(const k of Reflect.ownKeys(child)) {
     console.log(k);
 }
 
+console.log("assigned(parent,child) =========");
+for (const k in motherChild) {
+    console.log(k);
+}

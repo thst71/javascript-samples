@@ -2,12 +2,16 @@
 <html lang="de">
 <head>
     <title>alles zusammen</title>
-</head>
+ </head>
+ <script>
+    window.onload = () => console.log("in window.onload");
+</script>
 <body onload="console.log('im html');">
 <h1>Hallo mit addEventHandler</h1>
 <script>
     window.addEventListener("load", () => console.log("added 1"));
     window.addEventListener("load", () => console.log("added 2"));
 </script>
+
 </body>
 </html>

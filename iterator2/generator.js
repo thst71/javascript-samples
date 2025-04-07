@@ -1,5 +1,4 @@
 function *generator() {
-    yield *[..."abcdefgh"];
     console.log("not now, call me later");
     yield 8;
     console.log("yielded 8");

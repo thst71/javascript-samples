@@ -1,5 +1,6 @@
+const calcModule = require('./BigIntCalc.module');
 
-let calc = new BigCalc(5);
+let calc = new calcModule.BigCalc(5);
 
 let total = calc.plus(10.0)
     .mult(50.0)

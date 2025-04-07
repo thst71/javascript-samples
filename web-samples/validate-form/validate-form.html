@@ -5,6 +5,10 @@
     <script>
         function validateForm(event) {
             try {
+                console.log(`innerHTML: ${this.innerHTML}`);
+                console.log(`outerHTML: ${this.outerHTML}`);
+                console.log(`textContent: ${this.textContent}`);
+                
                 let userInput = this.children["userinput"];
                 if (userInput.value.match(/\d+/)) {
                     this.children["error"].textContent = "No digits allowed in input!";

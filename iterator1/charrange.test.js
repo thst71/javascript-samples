@@ -6,3 +6,7 @@ console.log([...cRange]);
 
 let [b1, c1, d1, e1, ...rest] = [...cRange];
 console.log(b1, c1, d1, e1, rest);
+
+for(const a of cRange) {
+    break;
+}

@@ -15,6 +15,7 @@ class BigCalc {
         if(typeof amount === 'bigint') {
             bigAmount = amount
         } else {
+            // Gefahr von Überlauf!
             bigAmount = BigInt(Math.round(Number(amount) * Number(this.factor)));
         }
 

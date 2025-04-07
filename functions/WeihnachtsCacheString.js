@@ -30,8 +30,9 @@ class WeihnachtsbaumString {
 
 
 function weihnachtscache(hoehe) {
+ //   if(!("cache" in weihnachtscache)) weihnachtscache.cache = {};
     if(!weihnachtscache.cache) weihnachtscache.cache = {};
-    
+
     let tree;
     if(weihnachtscache.cache[hoehe]) {
         console.log("cached tree - gebraucht, wie neu");
@@ -50,7 +51,9 @@ weihnachtscache(4);
 weihnachtscache(5);
 weihnachtscache(6);
 
-console.log(weihnachtscache.cache);
+console.log("---- Baumlager");
+console.log(JSON.stringify(weihnachtscache.cache));
+console.log("----")
 
 weihnachtscache(4);
 weihnachtscache(5);

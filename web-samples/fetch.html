@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>load google</title>
+        <script>
+            async function fetchGoogle(e) {
+                let response = await fetch("https://www.heise.de/thema/Kuenstliche-Intelligenz");
+                let body = await response.text;
+                document.querySelector("#output").innerHTML = body;
+            }
+        </script>
+
+    </head>
+    <body>
+        <a href="" id="callasync">call w async</a>
+    </body>
+</html>
+<script>
+    let lnk = document.querySelector("#callasync");
+    lnk.addEventListener("click", (e) => {e.preventDefault(); fetchGoogle(e);});
+</script>    

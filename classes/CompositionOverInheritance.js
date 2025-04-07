@@ -1,3 +1,33 @@
+/*
+
+Hint empty class template
+
+class StringSet {
+    #data = new Set();
+    static #assertString = function (p) {
+        if(typeof p !== "string") 
+            throw TypeError("all elements must be strings") 
+        else return true
+    };
+
+    constructor(...initialData) {
+
+    }
+
+    has(p) {
+    }
+
+    add(p) {
+    }
+
+    remove(p) {
+    }
+
+    forEach(fEFunction, thisArg) {
+    }
+}
+*/
+
 class StringSet {
     #data = new Set();
     static #assertString = function (p) {
