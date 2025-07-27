@@ -65,7 +65,7 @@ function displayError(err) {
  */
 function objectToForm(dataObject) {
     fields.forEach(fName => {
-        let ff = this.querySelector("#" + fName);
+        let ff = document.querySelector("#" + fName);
         if (ff) ff.value = dataObject[fName];
     });
 }
@@ -102,8 +102,8 @@ function formModeUpdate(id) {
  */
 function formModeCreate() {
     // clear form attributes
-    appForm.removeAttribute("id");
-    appForm.removeAttribute("cmd");
+    appForm.removeAttribute("data-id");
+    appForm.removeAttribute("data-cmd");
 
 }
 
