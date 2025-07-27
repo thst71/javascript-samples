@@ -9,12 +9,13 @@ let numbers = [];
 
 let digitizer = (sequence, nextChar) =>
     DIGITS.includes(nextChar) ? sequence + nextChar
-        : (numbers.push(sequence), "");
+        : (sequence && numbers.push(sequence), "");
 
 numbers.push([...INPUT].reduce( digitizer, ""));
-let result = numbers.filter( x => x );
+let result = numbers.map(Number);
 console.log(result);
 
 numbers = [];
-let last, reduced = [(last = [...INPUT].reduce( digitizer, "")) && false, ...numbers, last].filter(x => x)
-console.log(reduced);
+numbers.push([].reduce.call(INPUT, digitizer, ""));
+let result2 = numbers.map(Number);
+console.log(result2);
