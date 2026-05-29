@@ -8,7 +8,8 @@ const [a, b, ...remaining] = [...new Sieve(100)];
 
 console.log(a,b, remaining);
 
-let primerator = new Sieve(10000)[Symbol.iterator](); // just flags
+let primerator
+    = new Sieve(10000)[Symbol.iterator](); // just flags
 let p;
 console.log( "  0 ... 100");
 while((p=primerator.next()?.value) && p<100) console.log(p);
