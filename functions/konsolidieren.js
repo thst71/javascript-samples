@@ -25,13 +25,41 @@ console.log("k2: " + konsolidieren2(0, (a, b) => a + b, 1, 2, 3, 4, 5));
 console.log("===== Wrapper");
 function wrap(f) {
     return function (...all) {
-        console.log("------------");
+        console.log("------------ wrap with spread");
         console.log(f(...all));
         console.log("------------");
     }
 }
 
+function wrapWithApply(f, context) {
+    return function (...all) {
+        console.log("---------------- wrapWithApply");
+        console.log(f.apply(context, all));
+        console.log("----------------");
+    }
+}
+
+function wrapWithCall(f, context) {
+    return function (...all) {
+        console.log("---------------- wrapWithCall");
+        console.log(f.call(context, ...all));
+        console.log("----------------");
+    }
+}
+
 let wrappedF = wrap((a,b,c) => a+b+c);
+wrappedF(1,2,3);
+wrappedF(1,2,3,4);
+wrappedF(1,2);
+wrappedF();
+
+wrappedF = wrapWithApply((a,b,c) => a+b+c);
+wrappedF(1,2,3);
+wrappedF(1,2,3,4);
+wrappedF(1,2);
+wrappedF();
+
+wrappedF = wrapWithCall((a,b,c) => a+b+c);
 wrappedF(1,2,3);
 wrappedF(1,2,3,4);
 wrappedF(1,2);
