@@ -1,5 +1,5 @@
 import AnyName from "./bitset.js"
-import AnyName2, * as bitset from "./bitset.js"
+import AnyName2, * as bitsetModule from "./bitset.js"
 
 let bitSet = new AnyName();
 bitSet.add("1");
@@ -9,7 +9,7 @@ let bitSet2 = new AnyName2();
 bitSet2.add("2");
 console.log("" + bitSet2);
 
-console.log(bitset.HARRAY);
-console.log(bitset.HARRY);
-console.log(bitset.Harry);
-console.log(bitset.Hairy);
+console.log(bitsetModule.HARRAY);
+console.log(bitsetModule.HARRY);
+console.log(bitsetModule.Harry);
+console.log(bitsetModule.Hairy);
