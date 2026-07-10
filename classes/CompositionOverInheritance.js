@@ -30,6 +30,7 @@ class StringSet {
 
 class StringSet {
     #data = new Set();
+
     static #assertString = function (p) {
         if(typeof p !== "string") 
             throw TypeError("all elements must be strings") 

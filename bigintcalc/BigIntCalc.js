@@ -29,7 +29,7 @@ class BigCalc {
                 break;
     
             case '-':
-            this.result -= bigAmount;
+                this.result -= bigAmount;
             break;
 
             case '*':

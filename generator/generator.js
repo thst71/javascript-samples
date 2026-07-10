@@ -1,3 +1,4 @@
+/*
 function *generator() {
     yield 1;
     console.log("yielded 1");
@@ -13,6 +14,7 @@ function *generator() {
 for( let x of generator()) {
     console.log(x);
 }
+*/
 
 function *iterate(...arrs) {
     for(const a of arrs) {
@@ -33,7 +35,7 @@ for(const i of iterate([1,2],[3,4,5],[6,7,8])) {
 
 
 
-
+/*
 
 function *iterate2(...arrs) {
     for(const a of arrs) {
@@ -46,3 +48,4 @@ function *iterate2(...arrs) {
 for(const i of iterate2([1,2],33,[3,4,5],[6,7,8])) {
     console.log(i);
 }
+*/

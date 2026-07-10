@@ -1,16 +1,21 @@
 import express from 'express';
 import api from './api-router.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const __dirname = new URL('.', import.meta.url).pathname;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 const port = 3000;
 
-const APP_HTML = __dirname + "static/app.html";
-const STATIC = __dirname + "static";
+const STATIC = path.join(__dirname, 'static');
+const APP_HTML = path.join(STATIC, 'app.html');
+
 
 app.get('/', (req, res) => res.sendFile(APP_HTML));
 
-app.use('/static', express.static(STATIC, {index: false}));
+app.use('/static', express.static(STATIC, {index: true}));
 
 // forward api calls to api-router
 app.use('/api', api);

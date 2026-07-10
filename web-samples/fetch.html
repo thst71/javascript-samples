@@ -4,8 +4,8 @@
         <title>load google</title>
         <script>
             async function fetchGoogle(e) {
-                let response = await fetch("https://www.heise.de/thema/Kuenstliche-Intelligenz");
-                let body = await response.text;
+                let response = await fetch("http://127.0.0.1:8080/fetch.html");
+                let body = await response.text();
                 document.querySelector("#output").innerHTML = body;
             }
         </script>
@@ -13,6 +13,7 @@
     </head>
     <body>
         <a href="" id="callasync">call w async</a>
+        <div id="output"></div>
     </body>
 </html>
 <script>

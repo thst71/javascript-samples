@@ -30,10 +30,10 @@ function nospace(texts, ...values) {
 }
 
 console.log(nospace`space is big space is dark, it's hard to find a place to park.
-                
-                
-    oooooooooo  
-                
-                `);
+      ooooooo   
+    ooo      o  
+    ooo         
+    ooo     oo  
+      oooooo    `);
 console.log(magic`space is big space is dark, it's hard to find a place to park.${1 + 1}hhh`);
-
+console.log(magic`stack this ${nospace`no space 4 u`}`)

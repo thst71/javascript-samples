@@ -3,7 +3,8 @@
 let parent = {
     task: "mother",
     firstname: "Susanne",
-    lastname: "Smith"
+    lastname: "Smith",
+    [Symbol("foo")]: "a Symobol of foo"
 };
 
 let child = Object.create(parent);
