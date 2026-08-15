@@ -14,12 +14,19 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^5.1.1",
-    "mocha": "^10.7.3",
-    "cypress": "^13.13.3"
+    "cypress": "^15.20.1",
+    "mocha": "^11.8.0"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.1.0",
+    "js-yaml": "^4.3.1",
+    "diff": "5.2.2"
   },
   "directories": {
     "test": "test"
   },
-  "dependencies": {
+  "allowScripts": {
+    "cypress@15.20.1": true,
+    "fsevents@2.3.3": true
   }
 }
