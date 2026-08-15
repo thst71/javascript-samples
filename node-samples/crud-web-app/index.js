@@ -13,9 +13,10 @@ const STATIC = path.join(__dirname, 'static');
 const APP_HTML = path.join(STATIC, 'app.html');
 
 
-app.get('/', (req, res) => res.sendFile(APP_HTML));
+app.get('/', (req, res) =>
+    res.sendFile(APP_HTML));
 
-app.use('/static', express.static(STATIC, {index: true}));
+app.use('/static', express.static(STATIC, {index: false}));
 
 // forward api calls to api-router
 app.use('/api', api);

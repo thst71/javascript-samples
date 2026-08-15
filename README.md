@@ -18,7 +18,7 @@ If you manage to produce liabilities with the code from this repository, that is
 
 ## Standard Disclaimer
 
-Copyright ©2022. Thomas Strauß (Author). All Rights Reserved. Permission to use, 
+Copyright ©2022-2026. Thomas Strauß (Author). All Rights Reserved. Permission to use,
 copy, modify, and distribute this software and its documentation for educational, 
 research, and not-for-profit purposes, without fee and without a signed licensing agreement, 
 is hereby granted, provided that the above copyright notice, this paragraph and the following 
